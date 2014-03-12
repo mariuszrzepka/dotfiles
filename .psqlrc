@@ -1,0 +1,20 @@
+\set ON_ERROR_ROLLBACK interactive
+
+-- automatically switch between extended and normal
+-- \x auto
+
+-- always show how long a query takes
+\timing
+
+\set show_slow_queries 'SELECT (total_time / 1000 / 60) as total_minutes, (total_time / calls) as average_time, query FROM pg_stat_statements ORDER BY 1 DESC LIMIT 100;'
+
+\set PROMPT1 '%[%033[1;33;40m%]%n@%/%R%[%033[0m%]%# '
+
+\pset linestyle unicode
+\pset border 2
+
+\pset null ¤
+
+\set PROMPT1 '%[%033[33;1m%]%x%[%033[0m%]%[%033[1m%]%/%[%033[0m%]%R%# '
+
+\set show_buffers 'SELECT c.relname, pg_size_pretty(count(*) * 8192) as buffered, round(100.0 * count(*) / (SELECT setting FROM pg_settings WHERE name=\'shared_buffers\')::integer, 1) AS buffers_percent, round(100.0 * count(*) * 8192 / pg_relation_size(c.oid), 1) AS percent_of_relation FROM pg_class c INNER JOIN pg_buffercache b ON b.relfilenode = c.relfilenode INNER JOIN pg_database d ON (b.reldatabase = d.oid AND d.datname = current_database()) where c.relname not like \'pg_%\' GROUP BY c.oid, c.relname ORDER BY 3 DESC LIMIT 100';

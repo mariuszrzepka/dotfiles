@@ -1,0 +1,30 @@
+# vim: set ft=sh:
+
+alias vmstat="vmstat -S M"
+alias grep="grep --color -E"
+alias free="free -m"
+alias view="vim -R"
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+alias h="history"
+alias x="exit"
+alias setdark="~/guake-colors-solarized/set_dark.sh"
+alias setlight="~/guake-colors-solarized/set_light.sh"
+alias lsg="ls | grep"
+alias kj="ps aux | grep java | grep -v grep | awk '{print \$2}' | xargs kill -9"
+alias psgrep="pgrep -lf"
+alias netstat="netstat -tulpn"
+alias ifconfig="/sbin/ifconfig"
+alias findbigones="find . -type f -size +50000k -exec ls -lh {} \; | awk '{ print \$9 \": \" \$5 }'"
+alias drop_caches="echo 3 | sudo tee /proc/sys/vm/drop_caches"
+
+export HISTFILESIZE=
+export HISTSIZE=
+export PAGER="less -S"
+export MANPAGER="less -X"
+export EDITOR="vim"
+export GIT_EDITOR="vim"
+export GIT_EDITOR="/usr/bin/vim 2>/dev/null"
+
+setxkbmap -option caps:escape
