@@ -29,3 +29,7 @@ export GIT_EDITOR="vim"
 export GIT_EDITOR="/usr/bin/vim 2>/dev/null"
 
 setxkbmap -option caps:escape
+
+if [ -f ~/dotfiles/.shell.local ]; then
+	. ~/dotfiles/.shell.local
+fi
