@@ -29,10 +29,6 @@ set nolist
 "set scrolloff=0
 "set ic
 
-if has('gui_running')
-  let g:SuperTabLongestHighlight = 1
-endif
-let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:NERDTreeWinSize = 60
 let g:DisableAutoPHPFolding = 1
 let g:loaded_delimitMate = 1
@@ -91,14 +87,6 @@ nmap <silent> <f5> :call toggle:mouse()<cr>
 
 map <Space> <PageDown>
 
-if has('gui_running')
-  colorscheme molokai
-  "set guifont=Monospace\ 16
-  imap <c-space> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
-else
-  imap <nul> <c-r>=SuperTabAlternateCompletion("\<lt>c-x>\<lt>c-o>")<cr>
-endif
-
 function! toggle:mouse()
   if &mouse == "a"
     set mouse=
@@ -118,4 +106,3 @@ endfunction
 "syntax sync minlines=200
 "let loaded_matchparen = 1
 "cunmap wQ
-"nmap <silent> <leader>fc :FufMruCmd<cr>
