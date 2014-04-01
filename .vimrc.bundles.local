@@ -1,5 +1,4 @@
 Bundle 'jlanzarotta/bufexplorer'
-Bundle 'mileszs/ack.vim'
 
 UnBundle 'spf13/vim-autoclose'
 "UnBundle 'spf13/vim-gocode'
