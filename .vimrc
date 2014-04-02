@@ -41,7 +41,8 @@ let g:airline_powerline_fonts=1
 "let mapleader = ","
 
 unmap <leader>et
-unmap <leader>ev unmap <leader>es
+unmap <leader>ev
+unmap <leader>es
 unmap <leader>ew
 unmap <leader>jt
 cmap <c-y> <cr>
