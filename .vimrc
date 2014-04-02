@@ -1,6 +1,6 @@
 "set t_Co=256
-set background=dark
-color molokai
+"set background=dark
+"color molokai
 
 set nofoldenable
 set nospell
@@ -35,6 +35,7 @@ let g:loaded_delimitMate = 1
 let g:loaded_matchparen = 1
 let g:loaded_showmarks = 1
 let g:autoclose_loaded = 1
+let g:go_disable_autoinstall = 1
 
 "let mapleader = ","
 
@@ -43,13 +44,14 @@ unmap <leader>ev
 unmap <leader>es
 unmap <leader>ew
 unmap <leader>jt
+cmap <c-y> <cr>
 cunmap w!!
 cunmap cwd
 cunmap cd.
 
 nmap ; :
-map! jj <esc>
-imap jj <esc>
+"map! jj <esc>
+"imap jj <esc>
 
 noremap <silent> q :q<cr>
 
