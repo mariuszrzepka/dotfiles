@@ -36,12 +36,12 @@ let g:loaded_matchparen = 1
 let g:loaded_showmarks = 1
 let g:autoclose_loaded = 1
 let g:go_disable_autoinstall = 1
+let g:airline_powerline_fonts=1
 
 "let mapleader = ","
 
 unmap <leader>et
-unmap <leader>ev
-unmap <leader>es
+unmap <leader>ev unmap <leader>es
 unmap <leader>ew
 unmap <leader>jt
 cmap <c-y> <cr>
@@ -106,5 +106,4 @@ endfunction
 "inoremap <silent> <Esc> <Esc>`^
 "au BufNewFile,BufRead *.php unmap <buffer>;
 "syntax sync minlines=200
-"let loaded_matchparen = 1
 "cunmap wQ
