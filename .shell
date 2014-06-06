@@ -13,6 +13,7 @@ alias c="clear"
 alias s="cd ~/src"
 alias d="cd ~/Downloads"
 alias v="vim"
+alias v.="vim ."
 alias g="git"
 alias svndi="svn di | vim - -R"
 alias sd="svndi"
@@ -39,7 +40,8 @@ export GIT_EDITOR="vim"
 export GIT_EDITOR="/usr/bin/vim 2>/dev/null"
 
 #setxkbmap -option caps:escape
-setxkbmap -option caps:ctrl
+#setxkbmap -option caps:ctrl
+setxkbmap -option ctrl:nocaps
 
 #set -o vi
 
