@@ -30,6 +30,10 @@ alias vimrc="vim ~/.vimrc"
 alias vimrcl="vim ~/.vimrc.local"
 alias findbigones="find . -type f -size +50000k -exec ls -lh {} \; | awk '{ print \$9 \": \" \$5 }'"
 alias drop_caches="echo 3 | sudo tee /proc/sys/vm/drop_caches"
+function f() {
+    find -iname "*$1*"
+}
+
 
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
